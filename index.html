@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="チャネリング回答の基本構文をチェックする無料ツール">
+  <title>チャネリくん 構文チェッカー</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <p class="eyebrow">CHANNELING ANSWER REVIEW</p>
+      <h1>チャネリくん<br>構文チェッカー</h1>
+      <p>回答を貼り付けると、基本構文と表記を確認できます。内容の意味に関わる項目は、最後にご自身で確認してください。</p>
+      <p class="privacy">入力した文章はブラウザ内だけで処理されます。保存・送信はしません。</p>
+    </header>
+
+    <section class="card input-card" aria-labelledby="input-title">
+      <div class="section-heading"><span class="step">01</span><h2 id="input-title">文章を入力</h2></div>
+      <label for="question">クライアント様からの質問 <span class="optional">任意</span></label>
+      <textarea id="question" rows="4" placeholder="質問を貼り付けてください"></textarea>
+      <label for="answer">ご自身の回答</label>
+      <textarea id="answer" rows="15" placeholder="【1問目の回答】&#10;〇〇について&#10;&#10;結論...&#10;&#10;潜在意識によると...&#10;&#10;集合意識からのメッセージ..." required></textarea>
+      <div class="actions"><button id="check" class="primary" type="button">構文をチェック</button><button id="clear" class="secondary" type="button">入力を消去</button></div>
+    </section>
+
+    <section id="results" class="card results" aria-labelledby="result-title" hidden>
+      <div class="section-heading"><span class="step">02</span><h2 id="result-title">自動チェック結果</h2></div>
+      <p id="summary" class="summary" role="status"></p>
+      <div id="findings"></div>
+      <p class="note">自動チェックは文字列や改行の形を確認します。意味や文脈、誤字脱字を確定するものではありません。</p>
+    </section>
+
+    <section class="card manual" aria-labelledby="manual-title">
+      <div class="section-heading"><span class="step">03</span><h2 id="manual-title">最後にご自身で確認</h2></div>
+      <p>2つのチェックシートで重なる項目をまとめています。チェック状態は保存されません。</p>
+      <div id="manual-list"></div>
+    </section>
+    <footer>パターン①・②を統合した試作版</footer>
+  </main>
+</body>
+</html>
